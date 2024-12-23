@@ -9,6 +9,8 @@
 1. [Purpose](#purpose)
 1. [Config](#config)
 1. [JSON structure](#json-structure)
+    - [Generic device](#generic-device)
+    - [dbus-serialbattery](#dbus-serialbattery)
 1. [Install / Update](#install--update)
 1. [Uninstall](#uninstall)
 1. [Restart](#restart)
@@ -42,6 +44,8 @@ Copy or rename the `config.sample.ini` to `config.ini` in the `dbus-mqtt-battery
 
 
 ## JSON structure
+
+### Generic device
 
 <details><summary>Minimum required to start the driver</summary>
 
@@ -201,6 +205,9 @@ Please remove the `--> *` comments to get a valid `JSON`. Comments are not allow
 ```
 </details>
 
+### dbus-serialbattery
+
+If you want to get the values from a dbus-serialbattery, then with dbus-serialbattery version `v2.0.20241223dev` (or later) and dbus-mqtt-battery version `v1.0.10-dev (20241223)` (or later) you can specify this topic `/N/<VRM_ID>/battery/<BATTERY_INSTANCE>/JsonData` without having to modify any data with Node-RED or other scripts. Replace the placeholders `<...>` with your values.
 
 ## Install / Update
 
